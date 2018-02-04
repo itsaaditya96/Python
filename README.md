@@ -432,6 +432,9 @@ Step 3: Implement the same logic using while loop
 Summary of this assignment: In this assignment, you have learnt the implementation of iteration control structure and break statement. 
 
 
+
+## Strings - Assignments
+
 ### Assignment 21: Strings – Observations from Retail Application - Guided Activity
 
 Objective: Observe the need for features in the retail application scenario to correlate the application of Strings 
@@ -594,8 +597,11 @@ b. List all the courses opted by Student “John”.
 c. Students “John” is also interested in elective course mentioned above. Print the updated tuple including electives 
 d. Check whether Student “John” is allowed to change his course from “Software Engg” to “Computer Networks”. If yes, print the updated course list else mention the reason for the same. 
 
-Summary of this assignment: In this assignment, you have learnt the implementation of Tuple operations for given business scenario. Infosys Limited Assignments for Programming in Python 
+Summary of this assignment: In this assignment, you have learnt the implementation of Tuple operations for given business scenario. 
 
+
+
+## Lists - Assignments
 
 ### Assignment 30: Accessing Elements from Lists - Demo 
 
@@ -621,18 +627,18 @@ Q8: print ("Accessing the last element of the list: " + languages[-1])
 Summary of this assignment: In this assignment, you have revisited concepts of lists through code snippets
 
 
-###Assignment 31: Lists – Hands - on - Practice 
+### Assignment 31: Lists – Hands - on - Practice 
 
 Objective: Given a computational problem, be able to use the right data structures (lists and strings) and implement the solution to the problem and test using a set of values in an IDE 
 
 Problem Description: Write a Python program to generate first ‘n’ Fibonacci numbers. Store the generated Fibonacci numbers in a list and display it. 
-Sample input: Enter n 5 
-Sample Output: List: [0, 1, 1, 2, 3] 
+#### Sample input: Enter n 5 
+#### Sample Output: List: [0, 1, 1, 2, 3] 
 
 Summary: In this assignment, you have understood the application and implementation of Lists concept for the given computational problem. 
 
 
-###Assignment 32: Lists – Hands - on - Practice 
+### Assignment 32: Lists – Hands - on - Practice 
 
 Objective: Given a List of elements representing a computational problem, be able to sort the elements in ascending/descending order using an object oriented language (Python) using an IDE
 
@@ -645,7 +651,7 @@ Input: A List of N elements to be sorted
 Summary: In this assignment, you have understood the application and implementation of Lists concept for the given computational problem
 
 
-###Assignment 33: Lists - Hands - on - Practice 
+### Assignment 33: Lists - Hands - on - Practice 
 
 Objective: Given a computational problem, Implement the solution for the problem using suitable data structures from an object oriented language (Python) using an IDE 
 
@@ -656,7 +662,7 @@ Cost in Rs.   20,000    8,500         4,599 	    13,920
 ```
 
 
-###Assignment 34: Sets - Demo
+### Assignment 34: Sets - Demo
 
 Objective: Given a Set of elements representing a computational problem, be able to perform different operations using an object oriented language (Python) using an IDE
 
@@ -683,7 +689,7 @@ Q11: print(fruit_basket.copy())
 Summary of this assignment: In this assignment, you have revisited concepts of Sets through code snippets
 
 
-###Assignment 35: Sets – Hands - on - Practice
+### Assignment 35: Sets – Hands - on - Practice
 
 Objective: Given a Set of elements representing a computational problem, be able to provide solution by performing required operations on sets from an object oriented language (Python) using an IDE
 
@@ -703,7 +709,7 @@ f. List names and number of Students enrolled for either Java or Python courses
 Summary of this assignment: In this assignment, you have learnt the implementation of Set operations for given business scenario.
 
 
-###Assignment 36: Dictionary - Demo
+### Assignment 36: Dictionary - Demo
 
 Objective: Given a Dictionary of elements representing a computational problem, be able to perform different operations using an object oriented language (Python) on Eclipse IDE
 
@@ -722,7 +728,7 @@ f. Check whether details of customer with customer id 1002 exists in the diction
 Summary of this assignment: In this assignment, you have learnt the implementation of Dictionary operations for given business scenario.
 
 
-###Assignment 37: Dictionary – Hands - on - Practice
+### Assignment 37: Dictionary – Hands - on - Practice
 
 Objective: Given a computational problem, select the right set of data structures (lists and dictionary) and implement the solution to problem and test using a set of values in an IDE
 
