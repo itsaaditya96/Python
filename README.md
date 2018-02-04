@@ -619,3 +619,121 @@ Q7: print (languages[0] + " and " + languages[1] + " are quite different!")
 Q8: print ("Accessing the last element of the list: " + languages[-1]) 
 ```
 Summary of this assignment: In this assignment, you have revisited concepts of lists through code snippets
+
+
+###Assignment 31: Lists – Hands - on - Practice 
+
+Objective: Given a computational problem, be able to use the right data structures (lists and strings) and implement the solution to the problem and test using a set of values in an IDE 
+
+Problem Description: Write a Python program to generate first ‘n’ Fibonacci numbers. Store the generated Fibonacci numbers in a list and display it. 
+Sample input: Enter n 5 
+Sample Output: List: [0, 1, 1, 2, 3] 
+
+Summary: In this assignment, you have understood the application and implementation of Lists concept for the given computational problem. 
+
+
+###Assignment 32: Lists – Hands - on - Practice 
+
+Objective: Given a List of elements representing a computational problem, be able to sort the elements in ascending/descending order using an object oriented language (Python) using an IDE
+
+Problem Description: You have a bundle of currency of varied denominations. You want to arrange them in descending order. 
+Given below is one approach to perform the above operation.
+```
+Algorithm: Bubble Sort (List of N element) 
+Input: A List of N elements to be sorted 
+```
+Summary: In this assignment, you have understood the application and implementation of Lists concept for the given computational problem
+
+
+###Assignment 33: Lists - Hands - on - Practice 
+
+Objective: Given a computational problem, Implement the solution for the problem using suitable data structures from an object oriented language (Python) using an IDE 
+
+Problem Description: ABC Retail Store sells different varieties of Furniture to the customers. The list of furnitures available and its cost list are given below:
+```
+Furniture     Sofa set  Dining table  T.V. Stand  Cupboard 
+Cost in Rs.   20,000    8,500         4,599 	    13,920 
+```
+
+
+###Assignment 34: Sets - Demo
+
+Objective: Given a Set of elements representing a computational problem, be able to perform different operations using an object oriented language (Python) using an IDE
+
+Problem Description:
+Consider the sets,
+```
+fruits = {"apple", "orange", "banana", "apple", "pear", "papaya", "papaya"}
+fruit_basket = {"apple", "banana", "grapes", "mango", "kiwi"}
+```
+Predict the output of following statements:
+```
+Q1: print(fruits) 
+Q2: print(fruits & fruit_basket) 
+Q3: print(fruits | fruit_basket) 
+Q4: print(fruits - fruit_basket) 
+Q5: print(fruits ^ fruit_basket)
+Q6: print(len(fruit_basket)) 
+Q7: print("pear" in fruits) 
+Q8: print("pear" not in fruit_basket) 
+Q9: print(fruits.issubset(fruit_basket)) 
+Q10: print(fruits.issuperset(fruit_basket)) 
+Q11: print(fruit_basket.copy())
+```
+Summary of this assignment: In this assignment, you have revisited concepts of Sets through code snippets
+
+
+###Assignment 35: Sets – Hands - on - Practice
+
+Objective: Given a Set of elements representing a computational problem, be able to provide solution by performing required operations on sets from an object oriented language (Python) using an IDE
+
+Problem Description: Consider the scenario from course in student management system. Given below are 2 Sets representing the names of students enrolled for a particular course.
+```
+java_course = {“John”, “Jack”, “Jill”, “Joe”}
+python_course = {“Jake”, “John”, “Eric”, “Jill”}
+```
+Write a Python program to satisy below mentioned business requirements:
+a. List the number of Students enrolled for Python course
+b. List the names of Students enrolled for Java course only
+c. List the names of Students enrolled for Python course only
+d. List the number and names of Students enrolled for both Java and Python courses
+e. List the number and names of Students enrolled for either Java or Python courses but not both
+f. List names and number of Students enrolled for either Java or Python courses
+
+Summary of this assignment: In this assignment, you have learnt the implementation of Set operations for given business scenario.
+
+
+###Assignment 36: Dictionary - Demo
+
+Objective: Given a Dictionary of elements representing a computational problem, be able to perform different operations using an object oriented language (Python) on Eclipse IDE
+
+Problem Description: Given below is a Dictionary customer_details representing customer Details from Retail Application - Customer Id is key and Customer Name is value.
+```
+customer_details = { 1001 : "John", 1004 : "Jill", 1005: "Joe", 1003 : "Jack" }
+```
+Write Python code to perform below mentioned operations:
+a. Print details of Customers
+b. Print number of Customers
+c. Print Customer names in ascending order
+d. Delete the details of customer with customer id = 1005 and print updated dictionary
+e. Update the name of customer with customer id = 1003 to “Mary” and print updated dictionary
+f. Check whether details of customer with customer id 1002 exists in the dictionary.
+
+Summary of this assignment: In this assignment, you have learnt the implementation of Dictionary operations for given business scenario.
+
+
+###Assignment 37: Dictionary – Hands - on - Practice
+
+Objective: Given a computational problem, select the right set of data structures (lists and dictionary) and implement the solution to problem and test using a set of values in an IDE
+
+Problem Description: Consider the scenario of processing marks of students for a course in student management system. Given below is the list of marks scored by students. Find top three scorers for the course and also display average marks.
+Implement the solution for given business scenario.
+```
+Student Name  Marks Scored
+John          86.5
+Jack          91.2
+Jill          84.5
+Harry         72.1
+Joe           80.5
+```
+Summary: In this assignment, you have understood the application and implementation of Dictionary concept for the given computational problem.
