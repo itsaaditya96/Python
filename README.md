@@ -861,7 +861,7 @@ Problem Description: There are many built-in String methods available in Python.
 
 |Method | What the method does |
 |---|---|
-|text.endswith(“.jpg”) | |Return a copy of the string with all occurences of one substring replaced by another |
+|text.endswith(“.jpg”) |Return a copy of the string with all occurences of one substring replaced by another |
 |text.upper() | Return a copy of the string converted to lowercase |
 |text.lower() | Return the value True if the string has the given substring at the beginning |
 |text.replace(“tomorrow”, “Saturday”) | Return the value True if the string has the given substring at the end|
