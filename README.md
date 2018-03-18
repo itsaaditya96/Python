@@ -743,3 +743,61 @@ Harry         72.1
 Joe           80.5
 ```
 Summary: In this assignment, you have understood the application and implementation of Dictionary concept for the given computational problem.
+
+
+
+## Functions - Assignment
+
+### Assignment 38
+
+Objective: Given a computational problem, implement functions and solve it using appropriate parameter passing techniques (pass by reference)
+
+Problem Description:  At an airport, a traveler is allowed entry into the flight only if he clears the following checks
+i.    Baggage Check
+ii.   Immigration Check 
+iii.  Security Check
+
+The logic for the check methods are given below: 
+
+Implementation details
+#### check_baggage (baggage_amount)
+Check if baggage_amount is greater than or equal to 0 and less than or equal to 40.
+```
+if baggage_amount is VALID
+  return TRUE
+else
+  return FALSE
+```
+#### check_immigration (expiry_year)
+Check if expiry_year is greater than or equal to 2001 and less than or equal to 2025.
+```
+if expiry_year is VALID
+  return TRUE
+else
+  return FALSE
+```
+#### check_security(noc_status):boolean
+```
+if noc_status is TRUE
+  return TRUE
+else
+  return FALSE
+```
+#### traveler()
+In traveler() function, initialize the traveler Id and traveler name and invoke the functions check_baggage(), check_immigration() and check_security() by passing required arguments. Refer the table below for values of arguments.
+```
+Variable        Value
+traveler_id	    1001
+traveler_name	  Jim
+baggageAmount	  35
+expiryDate	    2019
+nocStatus	      true
+```
+```
+if all values of check_baggage(), check_immigration() and check_security() are true, diplay traveler_id and traveler_name 
+  display “Allow Traveller to fly!”
+else
+  display traveler_id and traveler_name
+  display “Detain Traveller for Re-checking!”
+```
+Summary of this assignment: In this assignment, you have learnt pass by reference technique
