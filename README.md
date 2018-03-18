@@ -298,14 +298,14 @@ Summary of this assignment: In this assignment, you have understood the implemen
 Objective: Given a real-world problem be able to understand the need for control structures and operators to implement the logic and solve the problem 
 
 Problem Description: Extend the program written for Assignment 15 to find the income tax to be paid (In Indian Rupees) and the total salary after the income tax deduction as per the details given in below table. 
-```
+
 | Gross Salary (In Indian Rupees) |	Income Tax percentage |
 |--- | --- |
 | Below 5,000                     |          Nil          |
 | 5,001 to 10,000                 |          10 %         |
 | 10,001 to 20,000                |          20%          |
 | More than 20,000                |          30%          |
-```
+
 Display the employee id, basic salary, allowances, gross pay, income tax and net pay. 
 
 Note: 
@@ -737,14 +737,15 @@ Objective: Given a computational problem, select the right set of data structure
 
 Problem Description: Consider the scenario of processing marks of students for a course in student management system. Given below is the list of marks scored by students. Find top three scorers for the course and also display average marks.
 Implement the solution for given business scenario.
-```
-Student Name  Marks Scored
-John          86.5
-Jack          91.2
-Jill          84.5
-Harry         72.1
-Joe           80.5
-```
+
+|Student Name | Marks Scored |
+|---|---|
+|John |          86.5 |
+|Jack  |        91.2 | 
+|Jill   |       84.5 |
+|Harry   |      72.1 |
+|Joe      |     80.5 |
+
 Summary: In this assignment, you have understood the application and implementation of Dictionary concept for the given computational problem.
 
 
@@ -752,6 +753,52 @@ Summary: In this assignment, you have understood the application and implementat
 ## Functions - Assignment
 
 ### Assignment 38
+
+Objective: Given a computational problem, implement functions and solve it using parameter passing technique followed in python
+
+Problem Description: Consider the distance in miles between two locations:
+  distance between Phoenix, Arizona and Salt Lake City, Utah in USA
+  distance between Phoenix, Arizona and Tampa, Florida in the US.
+
+We want to compare the distances and check which one is far off from Phoenix, Arizona. 
+
+Provided below are codes written to solve the above problem using pass by reference technique – using Required arguments and Keyword Arguments.
+
+Code:
+ 
+Method 1: Pass by Reference – Required Arguments
+```
+def compare(phoenix_to_slc, phoenix_to_tampa):
+  if phoenix_to_slc > phoenix_to_tampa:
+    print("SLC is far from Phoenix compared to Tampa, Florida")
+  elif(phoenix_to_slc < phoenix_to_tampa):
+    print("Tampa, Florida is far from Phoenix compared to SLC")
+  else:
+    print("Both locations are equidistance from Phoneix")
+compare(1790,506)
+```
+
+Method 2: Pass by Reference – Keyword Arguments
+```
+def compare(phoenix_to_slc, phoenix_to_tampa): 
+  if phoenix_to_slc > phoenix_to_tampa: 
+    print("SLC is far from Phoenix compared to Tampa, Florida") 
+  elif(phoenix_to_slc < phoenix_to_tampa): 
+    print("Tampa, Florida is far from Phoenix compared to SLC") 
+  else: 
+    print("Both locations are equidistance from Phoneix") 
+compare (phoenix_to_tampa = 506, phoenix_to_slc = 1790)
+```
+
+Output:
+```
+SLC is far from Phoenix compared to Tampa, Florida
+```
+
+Summary of this assignment: In this assignment, you have learnt the implementation of functions and parameter passing technique - pass by reference through keyword arguments and reference arguments
+
+
+### Assignment 39
 
 Objective: Given a computational problem, implement functions and solve it using appropriate parameter passing techniques (pass by reference)
 
@@ -788,14 +835,15 @@ else
 ```
 #### traveler()
 In traveler() function, initialize the traveler Id and traveler name and invoke the functions check_baggage(), check_immigration() and check_security() by passing required arguments. Refer the table below for values of arguments.
-```
-Variable        Value
-traveler_id	    1001
-traveler_name	  Jim
-baggageAmount	  35
-expiryDate	    2019
-nocStatus	      true
-```
+
+|Variable |        Value |
+|---|---|
+|traveler_id	   | 1001|
+|traveler_name	 | Jim|
+|baggageAmount	 | 35|
+|expiryDate	   | 2019|
+|nocStatus	     | true|
+
 ```
 if all values of check_baggage(), check_immigration() and check_security() are true, diplay traveler_id and traveler_name 
   display “Allow Traveller to fly!”
@@ -804,3 +852,85 @@ else
   display “Detain Traveller for Re-checking!”
 ```
 Summary of this assignment: In this assignment, you have learnt pass by reference technique
+
+
+#### Assignment 40
+
+Objective: Revisit String built-in functions through match the following.
+Problem Description: There are many built-in String methods available in Python. Match each method to what it does.
+
+|Method | What the method does |
+|---|---|
+|text.endswith(“.jpg”) | |Return a copy of the string with all occurences of one substring replaced by another |
+|text.upper() | Return a copy of the string converted to lowercase |
+|text.lower() | Return the value True if the string has the given substring at the beginning |
+|text.replace(“tomorrow”, “Saturday”) | Return the value True if the string has the given substring at the end|
+|text.strip() | Returns the first index value when the given substring is found|
+|text.find(“python”) | Return a copy of the string with the leading and trailing whitespace removed|
+|Text.startswith(“<HTML>”) | Return a copy of the string converted to uppercase|
+
+ANSWERS:
+
+|Method | What the method does |
+|---|---|
+|text.endswith(“.jpg”)  | Return the value True if the string has the given substring at the end|
+|text.upper() | Return a copy of the string converted to uppercase |
+|text.lower() |Return a copy of the string converted to lowercase |
+|text.replace(“tomorrow”, “Saturday”) |Return a copy of the string with all occurences of one substring replaced by another |
+|text.strip() | Return a copy of the string with the leading and trailing whitespace removed|
+|text.find(“python”) | Returns the first index value when the given substring is found|
+|Text.startswith(“<HTML>”) | Return the value True if the string has the given substring at the beginning|
+
+Summary of this assignment: In this assignment, you have revisited String built-in functions through match the following.
+
+
+### Assignment 41
+
+Objective: Given a computational problem, select the right set of data structures (lists and dictionary) and implement the solution to problem and test using a set of values in an IDE
+
+Problem Description: Consider the price list of various items in the Retail Store. Customer John wants to know the
+i) Price of Costliest item sold in Retail store
+ii) Average price of items in the Retail store
+iii) Display of item price list in increasing order
+
+Implement the solution using user-defined and built-in functions to accomplish above mentioned business requirement.
+
+Code:
+```
+item_price = [1050, 2200, 8575, 485, 234, 150, 399] 
+def price_max(item_price): 
+    print("Price of Costliest item in the Retail Store: ",max(item_price)) 
+
+def average_price(item_price): 
+    total_price = 0 
+    for i in item_price: 
+        total_price += i 
+    average_price = total_price/len(item_price) 
+    print("Average Price of items in the Retail Store: ",average_price)
+
+def display_sorted_price(item_price): 
+    item_price.sort() 
+    print("Item Price List in increasing order: ",item_price) 
+
+price_max(item_price) 
+average_price(item_price) 
+display_sorted_price(item_price)
+```
+
+Output:
+```
+Price of Costliest item in the Retail Store: 8575 
+Average Price of items in the Retail Store: 1870.4285714285713 
+Item Price List in increasing order: [150, 234, 399, 485, 1050, 2200, 8575]
+```
+
+Summary: In this assignment, you have understood the application and implementation of Lists concept for the given computational problem.
+
+
+### Assignment 42
+
+Objective: Given a computational problem, implement the solution to the given problem using exception handling.
+
+Problem Description: Consider the customer ids of a customer in the Retail Store. Customer id can be vary between 1001 to 1005. Store the customer id in a list and handle appropriate exceptions for the following:
+i) Store the customer id “1002” as string
+ii) Print customerid[5]
