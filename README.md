@@ -299,11 +299,12 @@ Objective: Given a real-world problem be able to understand the need for control
 
 Problem Description: Extend the program written for Assignment 15 to find the income tax to be paid (In Indian Rupees) and the total salary after the income tax deduction as per the details given in below table. 
 ```
-Gross Salary (In Indian Rupees) 	Income Tax percentage 
-Below 5,000                               Nil 
-5,001 to 10,000                           10 % 
-10,001 to 20,000                          20% 
-More than 20,000                          30% 
+| Gross Salary (In Indian Rupees) |	Income Tax percentage |
+|--- | --- |
+| Below 5,000                     |          Nil          |
+| 5,001 to 10,000                 |          10 %         |
+| 10,001 to 20,000                |          20%          |
+| More than 20,000                |          30%          |
 ```
 Display the employee id, basic salary, allowances, gross pay, income tax and net pay. 
 
@@ -656,11 +657,13 @@ Summary: In this assignment, you have understood the application and implementat
 Objective: Given a computational problem, Implement the solution for the problem using suitable data structures from an object oriented language (Python) using an IDE 
 
 Problem Description: ABC Retail Store sells different varieties of Furniture to the customers. The list of furnitures available and its cost list are given below:
-```
-Furniture     Sofa set  Dining table  T.V. Stand  Cupboard 
-Cost in Rs.   20,000    8,500         4,599 	    13,920 
-```
 
+| Furniture | Cost in Rs. |
+|---|---|
+| Sofa set      | 20,000 |
+| Dining table  | 8,500 |
+| T.V. Stand    | 4,599 |
+| Cupboard      | 13,920 |
 
 ### Assignment 34: Sets - Demo
 
