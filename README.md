@@ -934,3 +934,10 @@ Objective: Given a computational problem, implement the solution to the given pr
 Problem Description: Consider the customer ids of a customer in the Retail Store. Customer id can be vary between 1001 to 1005. Store the customer id in a list and handle appropriate exceptions for the following:
 i) Store the customer id “1002” as string
 ii) Print customerid[5]
+
+
+
+## Object Oriented Fundamentals- Assignments
+
+### Assignment 43
+
