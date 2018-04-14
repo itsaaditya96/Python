@@ -1337,3 +1337,471 @@ Summary of this assignment: In this assignment, you have understood the implemen
 
 
 ### Assignment 53
+
+Objective: Observe the need for features in the retail application scenario to correlate the application of method overloading
+
+Problem Description: The Retail Store has the requirement for printing many reports including the bill. All reports contain header. The header may be
+```
+a line containing a character printed 70 times or
+a title of a report or
+a line containing a character specified number of times
+```
+
+Answer the following questions:
+```
+1. Which object oriented concept do you think is needed to implement this scenario?
+```
+
+Summary of this assignment: In this assignment, you have understood the need of method overloading using a retail application scenario
+
+
+### Assignment 54
+
+Objective: Given a class diagram for a use case representing a computational problem, use method and constructor overloading techniques to solve the problem and test using a set of values in an IDE 
+
+Problem Description: The scenario discussed in OO Concepts Part I Assignment 1 is revisited here. The Retail Store has the requirement for printing many reports including the bill. All reports contain header. The header may be
+```
+a line containing a character printed 70 times or
+a title of a report or
+a line containing a character specified number of times
+```
+
+A new class called PrintDetails with overloaded methods have to be created as shown below:
+
+|PrintDetails|
+|---|
+|+printHeader (char c): void|
+|+printHeader (char c,int no): void|
+|+printHeader (String c): void|
+
+Code:
+Execute the code using Eclipse IDE with the given inputs in the starter class, Retail and observe the results.
+```
+class PrintDetails:
+    def printheader(self, c='*', no=1):
+        print(c * no) 
+        
+obj = PrintDetails()    
+obj.printheader('#', 10)
+obj.printheader("Report")
+obj.printheader('#' ,10)
+obj.printheader()
+```
+
+Summary of this assignment: In this assignment, you have learnt the need and implementation of method with default parameters using a retail application scenario.
+
+### Assignment 55
+
+Objective: Observe the need for features in the retail application scenario to correlate the application of relationships concept
+Problem Description:
+1. The retail shop has two types of customers, Regular and Privileged.
+  a. What are the properties common to all Customers?
+  b. What are the properties which are different for the two kinds of customers?
+  c. What is the relationship between
+    i. Customer and Regular customer
+    ii. Customer and Privileged customer?
+  d. How can this relationship be represented using class diagram?
+  
+  Note: Regular customers are entitled to get some discount on each purchase apart from having all the properties of a customer. On the   other hand, privileged customers hold membership card – Platinum, Gold or Silver based on which they receive gifts on each purchase.   This is in addition to having all the properties of a customer. Thus in this case, Customer is the generalized case and Regular and     Privileged customer are the specialized cases of Customer
+  
+2. The retail store management wants to keep track of the address of every customer so as to allow for home delivery at a later point of time.
+  a.  How many fields represent the address?
+  b.  Do you think address qualifies to be a class?
+  c.  What do you think is the relationship between Customer and Address?
+  d.  How can this relationship be represented using class diagram?
+ 
+  Note: Address can be considered as a separate class since the same class if required can be reused at a later point of time. For       example, if retail store needs to keep track of its employees address, the same address class can be reused. The relationship between   Customer class and Address class will be “Has
+  –A” relationship since every customer has an address.
+  
+3. Consider PurchaseBill and PrintDetails classes, the bill needs to be created in a particular format. PrintDetails class contains methods which can be used to display the bill in the required format.
+  a.  What do you think is the relationship between PurchaseBill and PrintDetails classes?
+  b.  How can this relations
+  
+  Note: As stated, PrintDetails class contains methods which can be used to display the bill in the required format. Hence the           relationship between PurchaseBill and PrintDetails class is “uses-a” relationship
+  
+Summary of this assignment: In this assignment, you have understood the need of relationships and its representation using a retail application scenario
+
+
+### Assignment 56
+
+Objective: Given a class diagram for a use case representing a computational problem, implement inheritance (single level, multilevel and hierarchical) to solve the problem, trace the flow of the program between the base and derived classes and test using a set of values in an IDE and recognize the benefits of inheritance
+
+Problem Description: In the retail application, we have already seen that customers are of two types – Regular and Privileged. Regular customers are entitled for discount on each purchase and Privileged customers hold membership cards – Platinum, Gold or Silver based on which they are entitled to get gifts on each purchase.
+
+The class diagram presented to you as part of OO Concepts Part I Assignment 5 has been modified to represent the inheritance relationship.
+
+Note: Few instance variables and methods are not shown in the class diagram so as to keep the code simple to understand.
+
+Code:
+Execute the code using Eclipse IDE with the given inputs in the starter class, Retail and observe the results.
+```
+class Customer:
+    def __init__(self, id1=0, name=None): 
+        self.__customerid=id1 
+        self.__customername=name
+        
+    def setcustomerid(self, id1):
+        self.__customerid = id1
+        
+    def setcustomername(self, name):
+        self.__customername=name 
+        
+    def getcustomerid(self): 
+        return self.__customerid 
+    
+    def getcustomername(self): 
+        return self.__customername 
+    
+class RegularCustomer(Customer):
+    def __init__(self, id1=0, name=None, dis=0): 
+        super().__init__(id1,name) 
+        self.__discount=dis
+    
+    def setdiscount(self, dis):
+        self.__discount=dis 
+        
+    def getdiscount(self):
+        return self.__discount 
+    
+class PrivilegedCustomer(Customer):
+    def __init__(self, id1=0, name=None, card=None): 
+        super().__init__(id1,name) 
+        self.__memcardtype=card
+        
+    def setmemcardtype(self, card): 
+        self.__memcardtype=card
+        
+    def getmemcardtype(self): 
+        return self.__memcardtype
+    
+objr = RegularCustomer() 
+print("Regular Customer Details") 
+print("Customer Id: ", objr.getcustomerid()) 
+print("Customer Name: ", objr.getcustomername()) 
+print("Discount Eligible: ", objr.getdiscount()) 
+print("*********") 
+objp = PrivilegedCustomer() 
+print("Regular Customer Details") 
+print("Customer Id: ", objp.getcustomerid()) 
+print("Customer Name: ", objp.getcustomername()) 
+print("Discount Eligible: ", objp.getmemcardtype()) 
+print("*********") 
+objr = RegularCustomer() 
+objr.setcustomerid(1001) 
+objr.setcustomername('Ram') 
+objr.setdiscount(10.0) 
+print("Regular Customer Details") 
+print("Customer Id: ", objr.getcustomerid()) 
+print("Customer Name: ", objr.getcustomername()) 
+print("Discount Eligible: ", 
+objr.getdiscount()) 
+print("*********") 
+objp = PrivilegedCustomer() 
+objp.setcustomerid(1002) 
+objp.setcustomername("Seetha") 
+objp.setmemcardtype("Gold") 
+print("Regular Customer Details") 
+print("Customer Id: ", objp.getcustomerid()) 
+print("Customer Name: ", objp.getcustomername()) 
+print("Discount Eligible: ", objp.getmemcardtype())
+```
+
+Note: Instance variables can be initialized at object creation using __init__()
+
+Summary of this assignment: In this assignment, you have understood implementation of inheritance relationship and use of super() invocation to invoke parent class __init__() using a retail application scenario.
+
+
+### Assignment 57
+
+Objective: Revisit inheritance concepts through a quiz
+Q1. What is the output of the following code snippet?
+```
+class Base: 
+    def __init__(self): 
+        print("Parent init invoked") 
+        
+class Derived(Base): 
+    def __init__(self): 
+        print("Derived init invoked") 
+        
+obj = Derived()
+```
+
+Q2. What is the output of the following code snippet?
+```
+class Base: 
+    def __init__(self, v):
+        self.baseVar = v 
+        self.var=0 
+        print("Base Class init invoked") 
+        
+class Der(Base): 
+    def __init__(self, v): 
+        super().__init__(v) 
+        self.derVar=v 
+        self.var=0 
+        print("Derived class init invoked") 
+        
+    def display(self): 
+        print("Base variable value: ", self.baseVar) 
+        print("Derived variable value: ", self.derVar) 
+        
+    def useOfSuper(self): 
+        self.var=15 
+        print("Base Variable Value -> ", Base.var) 
+        print("Derived Variable Value -> ", self.var) 
+        
+d = Der(10) 
+d.display() 
+d.useOfSuper()
+```
+
+Q3. What is the output of the following code snippet?
+```
+class Base: 
+    def __init__(self, v): 
+        self.baseVar = v 
+        print("Base Class init invoked") 
+        
+class Der(Base): 
+    def __init__(self, v): 
+        self.derVar=v 
+        print("Derived class init invoked") 
+            
+    def display(self): 
+        print("Base variable value: ", self.baseVar) 
+        print("Derived variable value: ", self.derVar)
+        
+d = Der(10) 
+d.display()
+```
+
+Q4. What is the output of the following code snippet?
+```
+class Base: 
+    def __init__(self, v): 
+        self.baseVar = v 
+        print("Base Class init invoked") 
+
+class Der(Base): 
+    def __init__(self, v): 
+        self.derVar=v 
+        print("Derived class init invoked") 
+        
+    def display(self): 
+        print("Base variable value: ", self.baseVar) 
+        print("Derived variable value: ", self.derVar) 
+        
+d = Der(10) 
+d.display()
+```
+
+Q5. Say true or false
+a) Multilevel inheritance is not supported in Python
+b) Inheritance can be done with the help of passing the base class to derived class in Python
+c) In derived class __init__() method, ‘super’ should be the first statement
+d) All the private data members of the base class are directly accessible in the derived class
+
+Summary of this assignment: In this assignment, you have revisited concepts of inheritance through code snippets
+
+
+### Assignment 58
+
+Objective: Given a class diagram for a use case representing a computational problem, implement has-a and uses-a relationships to solve the problem and test using a set of values in an IDE and recognize the benefits of the mentioned relationships
+
+Problem Description: In the retail application, we have already seen that every customer has an address. Address consists of address line, city, state and zipcode.
+
+The class diagram presented to you as part of aggregation (has-a) example in OO Concepts Part I Assignment 7 has been modified.
+
+Note: Few instance variables and methods are not shown in the class diagram so as to keep the code simple to understand. Similarly, regular and privileged customer classes are also not shown here.
+
+Code:
+Execute the code using Eclipse IDE with the given inputs in the starter class, Retail and observe the results.
+```
+class Address: 
+    def __init__(self, addressline, city, state, zip1): 
+        self.__addressline = addressline 
+        self.__city=city 
+        self.__state=state 
+        self.__zip=zip1
+        
+    def setaddressline(self, address): 
+        self.__addressLine = address 
+        
+    def getaddressline(self): 
+        return self.__addressline 
+    
+    def setcity(self, city): 
+        self.__city = city 
+        
+    def getcity(self): 
+        return self.__city
+    
+    def setstate(self, state): 
+        self.__state = state 
+        
+    def getstate(self): 
+        return self.__state 
+    
+    def setzip(self, zip1): 
+        self.__zip = zip1 
+        
+    def getzip(self): 
+        return self.__zip 
+    
+class Customer: 
+    def __init__(self, cid, address): 
+        self.__customerid = cid 
+        self.__address = address 
+        
+    def getcustomerid(self): 
+        return self.__customerid 
+    
+    def getaddress(self): 
+        return self.__address 
+    
+objaddress = Address("No.333,Oak street", "Strathfield", "New South Wales", "570018") 
+objcust = Customer(1001, objaddress) 
+print("Customer Id:", objcust.getcustomerid()) 
+address = objcust.getaddress() 
+print("Customer Address: ", address.getaddressline(), ",", address.getcity(), ",", address.getstate(), ",", address.getzip())
+```
+
+Note: In this example, Address reference is passed to the ```__init()``` of Customer class. Since it is a reference of an object that is passed, the parameter passing technique used is pass by referene.
+
+Summary of this assignment: In this assignment, you have understood the implementation of aggregation relationship using a retail application scenario.
+
+
+### Assignment 59
+
+Objective: Given a class diagram for a use case representing a computational problem, implement has-a and uses-a relationships to solve the problem and test using a set of values in an IDE and recognize the benefits of the mentioned relationships
+
+Problem Description: In the retail application, we have already seen that purchase bill has to be created in a particular format.
+
+The class diagram presented to you as part of association (uses-a) example in OO Concepts Part I Assignment 7 has been modified to include instance variables and methods
+
+Note: Few instance variables and methods are not shown in the class diagram so as to keep the code simple to understand.
+
+Code:
+Execute the code using Eclipse IDE with the given inputs in the starter class, Retail and observe the results. Few changes are made to PurchaseBill class, the changes are highlighted in the code below:
+```
+class PrintDetails: 
+    def printheader(self, c, no=1): 
+        print(c*no) 
+        
+class PurchaseBill: 
+    def __init__(self, bid, billamount): 
+        self.__billid = bid 
+        self.__billamount = billamount 
+        
+    def getbillid(self): 
+        return self.__billid 
+    
+    def getbillamount(self): 
+        return self.__billamount 
+    
+    def calculatebill(self, mode, processcharge): 
+        if(mode=="Credit"): 
+            self.__billamount = self.__billamount + (self.__billamount * processcharge/100) 
+            
+    def displaybill(self): 
+        objprint = PrintDetails() 
+        objprint.printheader("-", 80) 
+        objprint.printheader(" Easy Shop Retail Store Bill ") 
+        objprint.printheader("-", 80) 
+        print("Bill Id: ", self.__billid) 
+        print("Final amount to be paid: Rs.", self.__billamount)
+        objprint.printheader("-", 80) 
+        objprint.printheader(" Thank You!!! ") 
+        objprint.printheader("-", 80) 
+        
+objpur = PurchaseBill(101, 1055.0) 
+objpur.calculatebill("Credit", 10.5) 
+objpur.displaybill()
+```
+
+Summary of this assignment: In this assignment, you have understood the implementation of association relationship using a retail application scenario.
+
+
+### Assignment 60
+
+# Sample code using OO concept
+
+```
+class customer: 
+    counter = 1000 #class variable 
+    
+    def __init__(self, telephoneno, customername, add): 
+        customer.counter += 1 
+        self.__customerid=customer.counter 
+        self.__customername=customername 
+        self.__telephoneno=telephoneno 
+        self.__address = add 
+        
+    def setcustomerid(self, cid): 
+        self.__customerid = cid 
+        
+    def settelephoneno(self, teleno): 
+        self.__telephoneno = teleno 
+    
+    def getcustomerid(self): 
+        return self.__customerid 
+    
+    def gettelephoneno(self): 
+        return self.__telephoneno 
+    
+    def getcustomername(self): 
+        return self.__customername 
+    
+    def getaddress(self): 
+        return self.__address 
+    
+    @staticmethod 
+    def gettotalcustomer(): 
+        return customer.counter-1000 
+    
+class regularcustomer(customer):
+    def __init__(self, telephoneno, customername, discount, add): 
+        # super to invoke baseclass init 
+        super().__init__(telephoneno, customername, add) 
+        self.__discount = discount 
+        
+    def setdiscount(self, dis): 
+        self.__discount = dis 
+        
+    def getdiscount(self): 
+        return self.__discount
+        
+class address: 
+    def __init__(self, add): 
+        self.__addressline = add 
+        
+    def setaddress(self, add): 
+        self.__addressline = add 
+        
+    def getaddress(self): 
+        return self.__addressline
+    
+regcustadd1 = address("No.22,Vijay Nagar Mysore Karnataka 570018") 
+teleno=[9201861311, 9201861321, 9201661311] 
+regcustobj1 = regularcustomer(teleno, "John", 12.5, regcustadd1) 
+#custobj1.setcustomerid(1001) 
+#custobj1.settelephoneno(1234567890) 
+print("Customer id:", regcustobj1.getcustomerid()) 
+print("Telephone no:", regcustobj1.gettelephoneno()) 
+print("Customer name:", regcustobj1.getcustomername()) 
+print("Discount:", regcustobj1.getdiscount()) 
+#temp1 = regcustobj1.getaddress().getaddress() 
+print("Customer's address:", regcustobj1.getaddress().getaddress()) 
+print("\n") 
+regcustadd2 = address("No.33,J.P. Nagar Bangalore Karnataka 570011") 
+teleno1 = [1122334455, 1199887766, 2244668897] 
+regcustobj2 = regularcustomer(teleno1, "Mary", 15.5,regcustadd2) 
+print("Customer id:", regcustobj2.getcustomerid()) 
+print("Telephone no:", regcustobj2.gettelephoneno())
+print("Customer name:", regcustobj2.getcustomername()) 
+print("Discount:", regcustobj2.getdiscount()) 
+print("Customer's address:", regcustobj2.getaddress().getaddress()) 
+print("\n") 
+print("Total customers registered:", customer.gettotalcustomer())
+```
