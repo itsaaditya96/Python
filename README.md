@@ -941,3 +941,178 @@ ii) Print customerid[5]
 
 ### Assignment 43
 
+Objective: Given a business scenario, able to identify the classes and objects
+
+Problem Description: A supermarket wants to automate the system of purchase of items by customers and the billing process. The automation involves the maintenance of items, employees, customers, purchase of items by customer and billing of items. Customers can be regular visitors to the store in which case they are eligible for discounts based on the bill amount. The customers can also be privileged ones, wherein they are given membership cards (Platinum, Gold and Silver). Such customers are eligible for gifts based on the type of membership card. The billing staff does the billing and delivery of items to the customer. The bill calculation involves the logic of computation of the bill depending on customer type. The customer can pay the bill through credit card or cash. In the former case, two percent processing charge is applicable. Sales tax is also applicable on the final bill amount. Employees in that supermarket can be permanent and temporary. Permanent employees will get additional benefits in salary.
+
+Questions
+``
+Identify the classes.
+Identify the attributes / behaviors associated with each class.
+``
+
+Summary of this assignment: In this assignment, you have revisited object oriented concepts using scenarios
+
+
+### Assignment 44
+
+Objective: Revisit object oriented concepts using a quiz
+
+Answer the following questions:
+```
+1. In the ATM machine, the customer chooses the operations using a touch screen. The customer need not know the internal working of the ATM machine. Which OO concept(s) can be used in this scenario?
+2. Consider the following statement: “Vehicles can be of two types viz. Water vehicles and Land vehicles “. Which OO concept may be used to represent this scenario?
+3. As part of our family trip plan we went to Zoo. My son asked me lot of questions I tried my level best to answer all of his questions. I showed him different types of monkeys which were locked in different rooms. He asked me, “Dad, you said all are monkeys then why they are kept in different rooms?” Now, which OO concept may be used to represent this scenario?
+```
+
+Summary of this assignment: In this assignment, you have revisited object oriented concepts using scenarios
+
+
+### Assignment 45
+
+Objective: Revisit object oriented concepts using a simple True/False questions
+
+Answer the following questions:
+```
+1. Wrapping up of data of different types into a single unit is known as encapsulation.
+2. Inheritance means the ability to reuse the data values of one object by other objects.
+3. Polymorphism is extensively used in implementing inheritance.
+4. Object-oriented systems can scale up better from small to large
+5. Object-based languages do not support inheritance and dynamic binding.
+```
+
+Summary of this assignment: In this assignment, you have revisited object oriented concepts using simple true/false questions
+
+### Assignment 46
+
+Objective: Given a business scenario, be able to identify the components of a use case diagram
+
+Problem Description: Refer to the course registration system case study and answer the following questions.
+
+Situation: A Course Registration System needs to be developed for an engineering college. The college wants an automated system to replace its manual system for the purpose of registration of students to branches and calculation of fees for each year. The engineering college provides graduation courses in various branches of engineering.
+The system will be used by the admin staff to register students admitted to the college to the branches at the time of joining the college and also to calculate the yearly fees for the students. The student has to register every year for the next academic year. The Admin takes care of the yearly registration of the students and the calculation of yearly fees. The system needs to be authenticated with a login id and password.
+Registration of a student to a branch is based on the qualifying exam marks and the entrance counseling. For every branch, a yearly branch fee is applicable. Discounts are given to the branch fees of the first year based on the qualifying exam marks. There is a registration fees also applicable to the first year students. Students can opt to be a day scholar or hostelite. Yearly bus fees are applicable for all the day scholars based on the distance of travel. Yearly hostel fees are applicable for all the hostelites. Yearly infrastructure fees and library fees are also applicable to all the students. Admin calculates the yearly college fees for each student and the college fees include all the fees specified earlier based on the type of student. Admin will provide a printed receipt of the fees to the students once the annual college fees have been paid.
+At the time of registration, student has to provide the permanent address and in case the student is opting to be a day scholar, he/she has to provide the residential address also.
+Assumption:
+1. Decision of the branch of study a student is allocated, is not within the scope of this case study
+
+Questions:
+```
+1. Identify all the classes of the course registration system
+2. Identify the attributes and behaviors of those classes as well.
+3. Draw the complete class diagram using the information collected.
+```
+
+Summary of this assignment: In this assignment, you have learnt how to actors and activities of a use case diagram using a course registration system scenario
+
+
+### Assignment 47
+
+Objective: Given a class diagram for a use case representing a computational problem, be able to recognize the three compartments of the class diagram and implement it using an object oriented language (Python) using an IDE
+
+Problem Description: In the retail application, there are many customers who visit the retail outlet to purchase various items. The manager of the retail outlet now wants to keep track of all its customers’ data. Let us assume that customer details include Customer Id and Telephone Number.
+
+For the class diagram identified in OO Fundamentals, implement the class using Eclipse IDE and execute it by writing a starter class.
+
+Code: Execute the code using Eclipse IDE with the given inputs and understand the following:
+```
+Access Specifiers
+Variables – Local and Instance variables
+Methods
+Starter class
+Creation of objects
+Reference variables
+Compilation and Execution of a python program
+```
+
+```
+class Customer:
+    def setcustomerid(self, id1):
+        self.__customerid = id1
+        
+    def settelephoneno(self, teleno):
+        self.__telephoneno = teleno 
+        
+    def getcustomerid(self):
+        return self.__customerid 
+    
+    def gettelephoneno(self):
+        return self.__telephoneno 
+    
+custobj = Customer() 
+custobj.setcustomerid(1001,)
+custobj.settelephoneno(9201861311) 
+print("Customer Id : ", custobj.getcustomerid()) 
+print("Telephone No : ", custobj.gettelephoneno())
+```
+
+Summary of this assignment: In this assignment, you have understood object oriented fundamentals - Access Specifiers, Variables – Local and Instance variables.
+
+
+### Assignment 48
+
+Objective: Given a class diagram for an use case representing a computational problem, use the ‘self’ reference to create and initialize instance variables of a class and test using a set of values in an IDE
+
+Problem Description: Let us revisit the class diagram drawn and implemented for Customer class as part of Object Oriented Fundamentals.
+
+Class diagram:
+
+|Customer|
+|---|
+|-customerid : int|
+|-telephoneno : long|
+|+setcustomerid(int) : void|
+|+getcustomerid() : int|
+|+settelephoneno(long) : void|
+|+gettelephoneno() : long|
+
+Code:
+Execute the code using Eclipse IDE with the given inputs and observe the results.
+```
+class Customer:
+    def setcustomerid(self, customerid):
+        customerid = customerid 
+        
+    def settelephoneno(self, teleno):
+        telephoneno = teleno 
+        
+    def getcustomerid(self):
+        return customerid 
+    
+    def gettelephoneno(self): 
+        return telephoneno 
+    
+    
+custobj = Customer() 
+custobj.setcustomerid(1001) 
+custobj.settelephoneno(9201861311) 
+print("Customer Id : ", custobj.getcustomerid()) 
+print("Telephone No : ", custobj.gettelephoneno())
+```
+Note: Without ‘self’, it will be considered as normal local variable and that will be removed at the end of the scope of method. Hence, it is not possible to access it from outside of the method where it is defined.
+
+Revised Code
+```
+class Customer:
+    def setcustomerid(self, customerid):
+        self.customerid = customerid 
+        
+    def settelephoneno(self, teleno):
+        self.telephoneno = teleno 
+        
+    def getcustomerid(self):
+        return self.customerid 
+    
+    def gettelephoneno(self): 
+        return self.telephoneno 
+    
+    
+custobj = Customer() 
+custobj.setcustomerid(1001) 
+custobj.settelephoneno(9201861311) 
+print("Customer Id : ", custobj.getcustomerid()) 
+print("Telephone No : ", custobj.gettelephoneno())
+```
+Note: “self” is not a keyword and has no special meaning in Python. We can use any name in that place. However, it is recommended not to use any name other than “self” (merely a convention and for readability)
+
+Summary of this assignment: In this assignment, you have learnt the usage of self reference for accessing the instance variables using a retail application scenario
