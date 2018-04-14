@@ -1061,6 +1061,7 @@ Class diagram:
 |---|
 |-customerid : int|
 |-telephoneno : long|
+|---|
 |+setcustomerid(int) : void|
 |+getcustomerid() : int|
 |+settelephoneno(long) : void|
@@ -1116,3 +1117,94 @@ print("Telephone No : ", custobj.gettelephoneno())
 Note: “self” is not a keyword and has no special meaning in Python. We can use any name in that place. However, it is recommended not to use any name other than “self” (merely a convention and for readability)
 
 Summary of this assignment: In this assignment, you have learnt the usage of self reference for accessing the instance variables using a retail application scenario
+
+
+### Assignment 49
+
+Objective: Observe the need for features in the retail application scenario to correlate the application of initializing the members and ‘static’ members
+
+Problem Description: In the retail application, each time a customer is registered, customer id must be automatically generated starting from 1001 and the details of the customer must be initialized. Also, retail shop management wants to know how many customers have registered at a point of time.
+
+Answer the following question:
+```
+What do you think is needed to implement the solution for the above problem?
+```
+
+Summary of this assignment: In this assignment, you have learnt
+```
+The need of __init__() method and static keyword in the retail application scenario
+```
+
+
+### Assignment 50 
+
+Objective: Given a class diagram for a use case representing a computational problem, initialize the data members using __init__() method and test using a set of values in an IDE
+
+Problem Description: In the retail application, as a customer is registered to the retail shop, the details of the customer must also be initialized.
+
+Class diagram:
+
+|Customer|
+|---|
+|-customerid : int|
+|-telephoneno : long[]|
+|-customername : String|
+|---|
+|+ setcustomerid(int) : void|
+|+getcustomerid() : int|
+|+settelephoneno(long[]) : void|
+|+gettelephoneno() : long[]|
+|+setcustomername(String) : void|
+|+getcustomername() : String|
+|+validatecustomername() : boolean|
+
+Code:
+Execute the code using Eclipse IDE with the given inputs and observe the results.
+```
+class Customer: 
+    def __init__(self, customerid, telephoneno, customername): 
+        self.__customerid=customerid 
+        self.__customername=customername 
+        self.__telephoneno=telephoneno 
+        
+    def setcustomerid(self, id): 
+        self.__customerid = id 
+    
+    def setcustomername(self, customername): 
+        self.__customername = customername 
+        
+    def settelephoneno(self, teleno): 
+        self.__telephoneno = teleno 
+        
+    def getcustomerid(self): 
+        return self.__customerid 
+    
+    def gettelephoneno(self): 
+        return self.__telephoneno 
+    
+    def getcustomername(self): 
+        return self.__customername 
+    
+    def validatecustomername(self): 
+        if(len(self.__customername)>=3 and len(self.__customername) <=20): 
+            return True
+        else: return False 
+        
+telephoneno=[9201861311, 9201861321, 9201661311] 
+custobj = Customer(1001, telephoneno, "Kevin") 
+if(custobj.validatecustomername()): 
+    print("Customer Id : ", custobj.getcustomerid()) 
+    temp = custobj.gettelephoneno() 
+    print("Telephone Nos : ", temp[0], ",", temp[1], ",", temp[2]) 
+    print("Customer Name : ", custobj.getcustomername()) 
+else: 
+    print("Invalid customer name. Customer name must be between 3 and 20 characters")
+```
+
+Points to keep in mind
+```
+1. There is no default __init()__ method in Python as like we have default constructor in Java. Hence, we have to initialize some value to the variable if we want to use it in the program later.
+2. No…Values initialized for each customer must be different. It depends on each customer. This can be achieved using parameterized __init__()
+```
+
+Summary of this assignment: In this assignment, you have understood the implementation of __init__() method and the need of parameterized __init__() using a retail application scenario.
