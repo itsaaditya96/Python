@@ -1,5 +1,5 @@
 def baggage_check(amount):
-    if amount in range(1,40):
+    if amount in range(0,40):
         return True
     else:
         return False
