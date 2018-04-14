@@ -1208,3 +1208,132 @@ Points to keep in mind
 ```
 
 Summary of this assignment: In this assignment, you have understood the implementation of __init__() method and the need of parameterized __init__() using a retail application scenario.
+
+
+### Assignment 51
+
+Objective: Given a class diagram for a use case representing a computational problem, initialize the data members using default constructors, parameterized __init__() and test using a set of values in an IDE
+
+Problem Description: In the retail application, as a customer is registered to the retail shop, the details of the customer must also be initialized.
+
+The class diagram discussed in Object Oriented Fundamentals Assignment 51 has been modified as shown below.
+
+Class diagram:
+
+|Customer|
+|---|
+|-customerid : int|
+|-telephoneno : long[]|
+|-customername : String|
+|---|
+|+ Customer(int, long[], String)|
+|+ setcustomerid(int) : void|
+|+getcustomerid() : int|
+|+settelephoneno(long[]) : void|
+|+gettelephoneno() : long[]|
+|+setcustomername(String) : void|
+|+getcustomername() : String|
+|+validatecustomername() : boolean|
+
+Code:
+Execute the code using Eclipse IDE with the given inputs in the starter class, Retail and observe the results.
+```
+class Customer: 
+    def __init__(self, customerid, telephoneno, customername): 
+        self.__customerid=customerid 
+        self.__customername=customername 
+        self.__telephoneno=telephoneno 
+        
+    def setcustomerid(self, id): 
+        self.__customerid = id 
+        
+    def setcustomername(self, customername): 
+        self.__customername = customername 
+        
+    def settelephoneno(self, teleno): 
+        self.__telephoneno = teleno 
+        
+    def getcustomerid(self): 
+        return self.__customerid 
+    
+    def gettelephoneno(self): 
+        return self.__telephoneno 
+    
+    def getcustomername(self):
+        return self.__customername
+    
+    def validatecustomername(self): 
+        if(len(self.__customername)>=3 and len(self.__customername) <=20): 
+            return True 
+        
+        else: 
+            return False 
+        
+telephoneno=[9201861311, 9201861321, 9201661311] 
+custobj = Customer(1001, telephoneno, "Kevin") 
+if(custobj.validatecustomername()): 
+    print("Customer Id : ", custobj.getcustomerid()) 
+    temp = custobj.gettelephoneno() 
+    print("Telephone Nos : ", temp[0], ",", temp[1], ",", temp[2]) 
+    print("Customer Name : ", custobj.getcustomername()) 
+else: 
+    print("Invalid customer name. Customer name must be between 3 and 20 characters")
+```
+
+Summary of this assignment: In this assignment, you have understood the implementation of parameterized __init__() method and the need of parameterized __init__() using a retail application scenario.
+
+
+### Assignment 52
+
+Objective: Given a class diagram for a use case representing a computational problem, use static/class variable and test using a set of values in an IDE
+
+Problem Description: In the retail application, each time a customer is registered, customer id must be automatically generated starting from 1001. Also, retail shop management wants to know how many customers have registered at a point of time.
+
+Note: Few instance variables are not shown in the class diagram so as to keep the code simple to understand.
+
+Class diagram:
+
+|Customer|
+|---|
+|-customerid : int|
+|---|
+|+Customer()|
+|+setcustomerid(int) : void|
+|+getcustomerid() : int|
+|+totalnoofcustomers() : int|
+
+Code:
+Execute the code using Eclipse IDE with the given inputs in the starter class, Retail and observe the results.
+```
+class Customer: 
+    counter = 1000 
+    def __init__(self): 
+        Customer.counter = Customer.counter+1 
+        self.__customerid=Customer.counter 
+        
+    def setcustomerid(self, cid): 
+        self.__customerid=cid 
+        
+    def getcustomerid(self): 
+        return self.__customerid 
+    
+    @staticmethod 
+    def totalcustomers(): 
+        return Customer.counter-1000 
+    
+objcust = Customer()     
+print("Customer Id: ", objcust.getcustomerid()) 
+
+objcust2 = Customer() 
+print("Customer Id: ", objcust2.getcustomerid()) 
+print("Total Customers: ", objcust.totalcustomers()) 
+print("Total Customers: ", objcust2.totalcustomers()) 
+print("Total Customers: ", Customer.totalcustomers())
+```
+
+Note: customerId is an instance variable of Customer class and it will be created separately for each and every object of Customer class. Hence each time an object of Customer class is created, constructor is called and customerId will be initialized to 1000 and will be incremented by 1 in the constructor as a result for all the objects customerId will remain as 1001. Hence we need to have a variable common to all the objects of Customer class
+
+Summary of this assignment: In this assignment, you have understood the implementation of instatnce methods and static methods.
+
+
+### Assignment 53
